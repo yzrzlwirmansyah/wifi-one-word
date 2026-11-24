@@ -4,7 +4,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 // explanation, just the loading spinner. Funny at once (everyone knows that
 // date), true to home Wi-Fi (it drops exactly when it matters most), and
 // fresher than the usual "slow" or "weak" — one word, no context needed.
-const line = "ghosting";
-if (line.length > 20) throw new Error("Word is too long for the entry.");
+const word = "ghosting";
+if (word.length > 20) throw new Error(`Word "${word}" is too long for the entry.`);
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", line, "utf8");
+writeFileSync("/output/entry.txt", word, "utf8");
